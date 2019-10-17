@@ -1,0 +1,5 @@
+name: 'Okta Login'
+type: module
+description: 'Login into Drupal using Okta accounts'
+core: 8.x
+package: 'Custom'

@@ -1,0 +1,5 @@
+okta_org_url: ''
+okta_client_id: ''
+sign_in_container_id: 'okta-signin-container'
+redirect_url: ''
+okta_auth_issuer: '/oauth2/default'

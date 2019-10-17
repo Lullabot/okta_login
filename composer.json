@@ -1,0 +1,6 @@
+{
+  "require": {
+    "okta/jwt-verifier": "^0.2.1",
+    "spomky-labs/jose": "^7.1.0"
+  }
+}

@@ -1,0 +1,20 @@
+okta_auth:
+  js:
+    js/okta_auth.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - okta_login/okta_sign_in
+
+okta_signout:
+  js:
+    js/okta_signout.js: {}
+  dependencies:
+    - core/drupal
+    - okta_login/okta_sign_in
+
+okta_sign_in:
+  js:
+    'https://global.oktacdn.com/okta-signin-widget/2.9.0/js/okta-sign-in.min.js': { type: external, minified: true }
+  dependencies:
+    - core/jquery

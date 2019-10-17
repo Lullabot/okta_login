@@ -1,0 +1,4 @@
+services:
+  okta_login.user_authenticator:
+    class: Drupal\okta_login\UserAuthenticator
+    arguments: []

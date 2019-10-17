@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function okta_login_theme() {
+  return [
+    'okta_login_signin_widget' => [
+      'variables' => [
+        'container_id' => NULL
+      ],
+    ],
+    'okta_login_signout' => [],
+  ];
+}

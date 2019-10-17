@@ -1,0 +1,38 @@
+okta_login.settings:
+  path: '/admin/config/okta_login/settings'
+  defaults:
+    _form: '\Drupal\okta_login\Form\SettingsForm'
+    _title: 'Okta Login Settings'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+okta_login.signin_widget:
+  path: 'user/okta-signin'
+  defaults:
+    _controller: 'Drupal\okta_login\Controller\SigninController::signin'
+    _title: 'Sign in'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+  options:
+    _maintenance_access: TRUE
+
+okta_login.authenticated:
+  path: 'user/okta-authenticate'
+  defaults:
+    _controller: 'Drupal\okta_login\Controller\SigninController::authenticate'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+  options:
+    _maintenance_access: TRUE
+
+okta_login.signout:
+  path: 'user/okta-signout'
+  defaults:
+    _controller: 'Drupal\okta_login\Controller\SigninController::signout'
+    _title: 'Sign out'
+  requirements:
+    _access: 'TRUE'
+  options:
+    _maintenance_access: TRUE
