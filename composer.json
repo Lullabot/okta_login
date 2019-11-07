@@ -1,4 +1,8 @@
 {
+  "name": "drupal/okta_login",
+  "description": "Login into Drupal using Okta accounts.",
+  "type": "drupal-module",
+  "homepage": "https://drupal.org/project/okta_login",
   "require": {
     "okta/jwt-verifier": "^0.2.1",
     "spomky-labs/jose": "^7.1.0"

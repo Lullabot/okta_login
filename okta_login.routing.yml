@@ -11,7 +11,7 @@ okta_login.settings:
 okta_login.signin_widget:
   path: 'user/okta-signin'
   defaults:
-    _controller: 'Drupal\okta_login\Controller\SigninController::signin'
+    _controller: 'Drupal\okta_login\Controller\AuthController::signin'
     _title: 'Sign in'
   requirements:
     _user_is_logged_in: 'FALSE'
@@ -21,7 +21,7 @@ okta_login.signin_widget:
 okta_login.authenticated:
   path: 'user/okta-authenticate'
   defaults:
-    _controller: 'Drupal\okta_login\Controller\SigninController::authenticate'
+    _controller: 'Drupal\okta_login\Controller\AuthController::authenticate'
   requirements:
     _user_is_logged_in: 'FALSE'
   options:
@@ -30,9 +30,10 @@ okta_login.authenticated:
 okta_login.signout:
   path: 'user/okta-signout'
   defaults:
-    _controller: 'Drupal\okta_login\Controller\SigninController::signout'
+    _controller: 'Drupal\okta_login\Controller\AuthController::signout'
     _title: 'Sign out'
   requirements:
+    # Sign out does not depend on whether the user is logged in Drupal or not.
     _access: 'TRUE'
   options:
     _maintenance_access: TRUE

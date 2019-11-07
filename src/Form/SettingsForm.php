@@ -29,8 +29,7 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('okta_login.settings');
 
     $form['okta_org_url'] = [
@@ -66,10 +65,10 @@ class SettingsForm extends ConfigFormBase {
     $this->config('okta_login.settings')
       ->set('okta_org_url', $form_state->getValue('okta_org_url'))
       ->set('okta_client_id', $form_state->getValue('okta_client_id'))
-      ->set('sign_in_container_id', $form_state->getValue('sign_in_container_id'))
       ->set('redirect_url', $form_state->getValue('redirect_url'))
       ->save();
 
     parent::submitForm($form, $form_state);
   }
+
 }

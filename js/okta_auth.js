@@ -47,7 +47,7 @@
 
           // No session, show the login form
           oktaSignIn.renderEl(
-            { el: '#' + settings.container_id },
+            { el: '#' + settings.containerId },
             function success(res) {
               // Nothing to do in this case, the widget will automatically redirect
               // the user to Okta for authentication, then back to this page if successful
@@ -67,7 +67,7 @@
           return;
         }
 
-        window.location.href = settings.authenticate_url + '?token=' + accessToken.accessToken;
+        window.location.href = settings.authenticateUrl + '?token=' + accessToken.accessToken;
       }
 
     }

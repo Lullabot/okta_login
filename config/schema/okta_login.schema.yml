@@ -1,0 +1,19 @@
+okta_login.settings:
+  type: config_object
+  label: 'Okta Login settings'
+  mapping:
+    okta_org_url:
+      type: string
+      label: 'Okta Org URL'
+    okta_client_id:
+      type: string
+      label: 'Okta Client ID'
+    sign_in_container_id:
+      type: string
+      label: 'Container id attribute for okta Sign-In form'
+    redirect_url:
+      type: string
+      label: 'URL to redirect user after authentication'
+    okta_auth_issuer:
+      type: string
+      label: 'Okta URL path for Oauth authentication'
